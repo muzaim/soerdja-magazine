@@ -1,6 +1,6 @@
 # MYBOOST Submission
 ```bash
-Muhammad Syafri Surya Muzaim - Fullstack Developer
+Muhammad Syafri Surya Muza`im - Fullstack Developer
 ```
 
 ---
