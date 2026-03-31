@@ -29,17 +29,17 @@ const podcasts = [
 const Podcast = () => {
 	return (
 		<div className=" h-full w-full pb-40">
-			<div className="flex flex-row justify-between items-center py-10">
-				<h1 className="text-[8rem] font-bold uppercase">Podcast</h1>
+			<div className="flex flex-col gap-4 py-10 md:flex-row md:items-center md:justify-between">
+				<h1 className="text-5xl font-bold uppercase sm:text-6xl lg:text-[8rem]">Podcast</h1>
 				<Link
 					href={`/podcast`}
-					className="font-semibold text-lg uppercase"
+					className="font-semibold text-base uppercase sm:text-lg"
 				>
 					All episodes &raquo;
 				</Link>
 			</div>
 			<div>
-				<div className="flex ">
+				<div className="flex flex-col gap-4 lg:flex-row">
 					{podcasts.map((podcast, index) => (
 						<PodcastCard
 							key={podcast.id.toString()}

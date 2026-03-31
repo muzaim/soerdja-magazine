@@ -29,8 +29,8 @@ const podcasts = [
 const LatestPodcast = () => {
 	return (
 		<div className=" h-full w-full pb-40">
-			<div className="flex flex-row justify-between items-center py-10">
-				<h1 className="text-[6rem] font-bold uppercase">
+			<div className="flex flex-col gap-4 py-10 md:flex-row md:items-center md:justify-between">
+				<h1 className="text-4xl font-bold uppercase sm:text-5xl lg:text-[6rem]">
 					Latest Podcast
 				</h1>
 				<Link
@@ -41,11 +41,11 @@ const LatestPodcast = () => {
 				</Link>
 			</div>
 			<div>
-				<div className="flex">
+				<div className="flex flex-col gap-4 lg:flex-row">
 					{podcasts.map((podcast) => (
 						<div
 							key={podcast.id}
-							className="w-1/3 p-6 flex flex-col gap-4 border border-gray-400 divide-x divide-gray-400"
+							className="w-full p-5 flex flex-col gap-4 border border-gray-400 sm:p-6 lg:w-1/3"
 							data-aos="fade-up"
 							data-aos-delay={(podcast.id * 200).toString()}
 						>
@@ -59,7 +59,7 @@ const LatestPodcast = () => {
 							<h1 className="font-bold text-xl text-black hover:underline leading-snug">
 								{podcast.title}
 							</h1>
-							<div className="flex flex-row text-sm text-gray-600 gap-1">
+							<div className="flex flex-col text-sm text-gray-600 gap-2 sm:flex-row sm:gap-4">
 								<p>
 									<span className="font-semibold text-black">
 										Date:

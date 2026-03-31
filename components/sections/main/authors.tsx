@@ -49,14 +49,14 @@ const authors = [
 const Authors = () => {
 	return (
 		<div className=" h-full w-full pb-40">
-			<div className="flex flex-row justify-between items-center py-10">
-				<h1 className="text-[8rem] font-bold uppercase">Authors</h1>
-				<span className="font-semibold text-lg uppercase">
+			<div className="flex flex-col gap-4 py-10 md:flex-row md:items-center md:justify-between">
+				<h1 className="text-5xl font-bold uppercase sm:text-6xl lg:text-[8rem]">Authors</h1>
+				<span className="font-semibold text-base uppercase sm:text-lg">
 					All authors &raquo;
 				</span>
 			</div>
 			<div>
-				<div className="grid grid-cols-2 ">
+				<div className="grid grid-cols-1 gap-4 md:grid-cols-2">
 					{authors.map((author, idx) => (
 						<AuthorCard
 							key={author.id.toString()}

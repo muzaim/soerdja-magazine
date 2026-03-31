@@ -6,23 +6,23 @@ import React from "react";
 const ArticleCard = ({ article, index }) => {
 	return (
 		<div
-			className="flex flex-row gap-8 py-8 border-b border-gray-300 last:border-b-0"
+			className="flex flex-col gap-6 py-8 border-b border-gray-300 last:border-b-0 md:flex-row md:gap-8"
 			data-aos="fade-up"
 			data-aos-delay={(index * 200).toString()}
 		>
-			<div className="">
+			<div className="shrink-0">
 				<Image
 					src={article.cover}
 					width={250}
 					height={250}
 					alt={article.title}
-					className="object-cover"
+					className="h-auto w-full object-cover md:w-[250px]"
 				/>
 			</div>
 
 			<div className="flex flex-col justify-between w-full">
 				<div className="flex flex-col gap-3">
-					<h1 className="font-bold text-3xl text-gray-900 font-poppins">
+					<h1 className="font-bold text-2xl text-gray-900 font-poppins sm:text-3xl">
 						{article.title}
 					</h1>
 					<p className="text-gray-600 leading-relaxed line-clamp-4">
@@ -30,8 +30,8 @@ const ArticleCard = ({ article, index }) => {
 					</p>
 				</div>
 
-				<div className="flex flex-row justify-between items-end mt-6">
-					<div className="flex flex-row gap-6 text-sm text-gray-700">
+				<div className="mt-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+					<div className="flex flex-col gap-2 text-sm text-gray-700 sm:flex-row sm:flex-wrap sm:gap-6">
 						<div className="flex gap-2">
 							<span className="font-semibold text-gray-800">
 								Author :

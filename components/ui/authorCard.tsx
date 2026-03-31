@@ -17,7 +17,7 @@ type AuthorCardProps = {
 export default function AuthorCard({ author, idx }: AuthorCardProps) {
 	return (
 		<div
-			className="flex items-center gap-5 p-4 border-gray-400 border"
+			className="flex flex-col items-start gap-4 p-4 border-gray-400 border sm:flex-row sm:items-center sm:gap-5"
 			data-aos="fade-up"
 			data-aos-delay={(idx * 200).toString()}
 		>
@@ -30,7 +30,7 @@ export default function AuthorCard({ author, idx }: AuthorCardProps) {
 			/>
 			<div className="flex flex-col">
 				<h1 className="font-bold text-lg text-black">{author.name}</h1>
-				<div className="flex flex-row gap-2">
+				<div className="flex flex-col gap-1 text-sm sm:flex-row sm:gap-2">
 					<span className="text-gray-700">Job: {author.job}</span>
 					<span className="text-gray-700">City: {author.city}</span>
 				</div>

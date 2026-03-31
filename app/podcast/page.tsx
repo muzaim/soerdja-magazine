@@ -46,58 +46,86 @@ const Podcast = () => {
 			<div className="px-4 md:px-8 lg:px-16">
 				<div className="space-y-6">
 					<div className="w-full">
-						<h1 className="w-full text-center font-bold uppercase text-[15vw] leading-none font-serif">
+						<h1 className="w-full text-center font-bold uppercase leading-none font-serif text-5xl sm:text-7xl md:text-[15vw]">
 							Podcast
 						</h1>
 					</div>
 					{podcasts.map((podcast, index) => (
 						<div
 							key={podcast.id}
-							className="grid grid-cols-12 items-center border-b border-black py-6 last:border-b-0 gap-4"
+							className="
+      group
+      flex flex-col gap-4
+      rounded-2xl border border-gray-200
+      p-4 md:p-5
+      hover:shadow-lg transition-all duration-300
+      bg-white
+    "
 						>
-							<span className="col-span-1 text-2xl font-bold text-gray-400 text-center">
-								{String(index + 1).padStart(2, "0")}
-							</span>
+							{/* Top: image + index */}
+							<div className="flex items-center gap-4">
+								<div className="relative">
+									<Image
+										src={podcast.image}
+										width={300}
+										height={300}
+										alt={podcast.title}
+										className="
+            w-24 h-24
+            rounded-xl object-cover
+            group-hover:scale-105 transition
+          "
+									/>
+									<span className="
+          absolute -top-2 -left-2
+          w-8 h-8
+          rounded-full bg-black text-white
+          text-xs font-bold flex items-center justify-center
+        ">
+										{index + 1}
+									</span>
+								</div>
 
-							<div className="col-span-3 flex justify-center">
-								<Image
-									src={podcast.image}
-									width={300}
-									height={300}
-									alt={podcast.title}
-									className="object-cover rounded-md"
-								/>
+								<div className="flex-1 flex flex-col gap-2">
+									<Link
+										href={`/podcast/${podcast.id}`}
+										className="font-semibold text-base md:text-lg leading-snug hover:underline"
+									>
+										{podcast.title}
+									</Link>
+
+									<div className="flex items-center gap-3 text-xs text-gray-500">
+										<span>{podcast.date}</span>
+										<span>•</span>
+										<span>{podcast.duration}</span>
+									</div>
+								</div>
 							</div>
 
-							<Link
-								href={`/podcast/${podcast.id}`}
-								className="col-span-4 font-semibold text-lg"
-							>
-								{podcast.title}
-							</Link>
-
-							<div className="col-span-2 text-sm text-gray-600 flex gap-5">
-								<p>
-									<span className="font-semibold text-black">
-										Date:
-									</span>{" "}
-									{podcast.date}
-								</p>
-								<p>
-									<span className="font-semibold text-black">
-										Duration:
-									</span>{" "}
-									{podcast.duration}
-								</p>
-							</div>
-
-							<div className="col-span-2 flex justify-center">
-								<button className=" cursor-pointer px-5 py-2 border border-black rounded-full text-sm font-medium uppercase hover:bg-black hover:text-white transition-colors duration-300">
-									play
+							{/* Bottom: CTA */}
+							<div className="flex items-center justify-between pt-2">
+								<button
+									className="
+          flex items-center gap-2
+          px-5 py-2.5
+          rounded-full
+          bg-black text-white
+          text-sm font-semibold uppercase
+          hover:bg-gray-900
+          transition
+        "
+								>
+									▶ Play Episode
 								</button>
+
+								<span className="text-xs text-gray-400 hidden md:block">
+									Listen now
+								</span>
 							</div>
 						</div>
 					))}
+
+
 				</div>
 			</div>
 		</>

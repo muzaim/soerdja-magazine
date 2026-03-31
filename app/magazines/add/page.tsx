@@ -130,7 +130,7 @@ const AddMagazines = () => {
 
 	return (
 		<div className="px-4 md:px-8 lg:px-16 ">
-			<div className="bg-white-30 text-black grid grid-cols-2 pt-5 gap-6 pb-10">
+			<div className="bg-white-30 text-black grid grid-cols-1 pt-5 gap-4 pb-10 sm:grid-cols-2 sm:gap-6">
 				<Link
 					href="/magazines"
 					className="font-bold text-lg uppercase leading-none"
@@ -153,11 +153,11 @@ const AddMagazines = () => {
 
 			<form
 				onSubmit={formik.handleSubmit}
-				className="h-max w-full bg-gray-100 p-8 border border-black-300 rounded-xl flex flex-col justify-between my-10"
+				className="my-10 flex h-max w-full flex-col justify-between rounded-xl border border-black-300 bg-gray-100 p-4 sm:p-6 lg:p-8"
 			>
 				{renderStage()}
 
-				<div className="flex justify-between mt-6">
+				<div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-between">
 					{stage > 1 ? (
 						<button
 							type="button"
@@ -167,7 +167,7 @@ const AddMagazines = () => {
 							Back
 						</button>
 					) : (
-						<div className="w-[100px]" />
+						<div className="hidden w-[100px] sm:block" />
 					)}
 
 					{stage < 4 ? (
@@ -195,7 +195,7 @@ const AddMagazines = () => {
 						<div
 							role="dialog"
 							aria-modal="true"
-							className="relative z-20 w-96 bg-white p-6 rounded-xl border border-black"
+							className="relative z-20 mx-4 w-full max-w-md rounded-xl border border-black bg-white p-6"
 						>
 							<h2 className="text-lg font-medium mb-4">
 								Please confirm that your data is correct before submitting

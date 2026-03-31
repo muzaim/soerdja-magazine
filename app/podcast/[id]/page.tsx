@@ -15,7 +15,7 @@ const PodcastDetailPage = () => {
 	return (
 		<>
 			<div className="px-4 md:px-8 lg:px-16">
-				<div className="bg-white-30 text-black grid grid-cols-2 py-5 gap-6">
+				<div className="bg-white-30 text-black grid grid-cols-1 py-5 gap-4 sm:grid-cols-2 sm:gap-6">
 					<h3 className="font-bold text-lg uppercase leading-none">
 						back
 					</h3>
@@ -23,16 +23,16 @@ const PodcastDetailPage = () => {
 						<span className="font-semibold uppercase">Podcast</span>
 					</div>
 				</div>
-				<div className="grid grid-cols-12 py-20 gap-[3rem]">
-					<div className="col-span-5 flex justify-end">
-						<div className="w-max">
+				<div className="grid grid-cols-1 gap-10 py-12 lg:grid-cols-12 lg:gap-[3rem] lg:py-20">
+					<div className="lg:col-span-5 lg:flex lg:justify-end">
+						<div className="w-full max-w-md">
 							<div className="flex flex-row gap-3 items-center">
 								<Image
 									src="/img/podcast/podcast3.png"
 									alt="podcast"
 									width={400}
 									height={400}
-									className="object-cover"
+									className="h-auto w-full object-cover"
 								/>
 							</div>
 							<div className="flex items-center justify-between text-sm mt-6">
@@ -105,9 +105,9 @@ const PodcastDetailPage = () => {
 						</div>
 					</div>
 
-					<div className="col-span-5 flex flex-col justify-start space-y-6 text-gray-800 leading-relaxed">
+					<div className="lg:col-span-5 flex flex-col justify-start space-y-6 text-gray-800 leading-relaxed">
 						<p className="text-2xl font-bold">Episode 01</p>
-						<h3 className="text-[6rem] font-bold uppercase text-black tracking-tighter leading-none">
+						<h3 className="text-4xl font-bold uppercase text-black tracking-tighter leading-none sm:text-5xl lg:text-[6rem]">
 							save the world from ourself!
 						</h3>
 						<p className="text-lg font-semibold text-gray-800">
@@ -151,7 +151,7 @@ const PodcastDetailPage = () => {
 							distinctio sapiente.
 						</p>
 						<hr />
-						<p className="text-[2rem] text-black font-bold">
+						<p className="text-2xl text-black font-bold sm:text-3xl">
 							The greatest glory in living lies not in never
 							falling, but in rising every time we fall. —Nelson
 							Mandela
@@ -186,7 +186,7 @@ const PodcastDetailPage = () => {
 						</p>
 					</div>
 
-					<div className="col-span-3"></div>
+					<div className="hidden lg:block lg:col-span-3"></div>
 				</div>
 
 				<hr />

@@ -3,29 +3,29 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
 	return (
-		<div className="h-[40rem] bg-black text-white flex flex-col justify-between">
+		<div className="bg-black text-white flex flex-col justify-between px-4 py-12 md:px-8 lg:px-16">
 			<div className="flex-1 flex items-center justify-center">
-				<div className="grid grid-cols-12 gap-12 w-3/4">
-					<h3 className="col-span-6 font-bold text-[5rem] uppercase leading-tight">
+				<div className="grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-12 md:gap-12">
+					<h3 className="md:col-span-6 font-bold text-4xl uppercase leading-tight sm:text-5xl lg:text-[5rem]">
 						Design News <br />
 						To Your Inbox
 					</h3>
 
-					<div className="col-span-6 flex items-center">
+					<div className="md:col-span-6 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
 						<input
 							type="email"
 							placeholder="Enter your email"
 							className="flex-1 px-4 py-3 border-b border-white bg-transparent text-white placeholder-gray-400 focus:outline-none focus:border-gray-300"
 						/>
-						<button className="ml-4 bg-white text-black font-bold px-6 py-3 uppercase tracking-wide hover:bg-gray-200 transition">
+						<button className="bg-white text-black font-bold px-6 py-3 uppercase tracking-wide hover:bg-gray-200 transition sm:ml-4">
 							Subscribe
 						</button>
 					</div>
 				</div>
 			</div>
 
-			<div className="border-t border-gray-700 py-8">
-				<div className="grid grid-cols-4 gap-8 w-3/4 mx-auto text-sm uppercase tracking-wide">
+			<div className="border-t border-gray-700 py-8 mt-12">
+				<div className="grid w-full max-w-6xl grid-cols-1 gap-8 mx-auto text-sm uppercase tracking-wide sm:grid-cols-2 lg:grid-cols-4">
 					<div>
 						<h4 className="font-bold mb-3 text-lg">
 							Free Magazine
@@ -52,7 +52,7 @@ const Footer = () => {
 							<li>Changelog</li>
 						</ul>
 					</div>
-					<div className="flex items-center justify-end gap-4">
+					<div className="flex items-center justify-start gap-4 lg:justify-end">
 						<a
 							href="#"
 							className="text-gray-400 hover:text-white transition"

@@ -18,8 +18,8 @@ const LatestArticle = () => {
 
 	return (
 		<div className=" h-full w-full pb-40">
-			<div className="flex flex-row justify-between items-center py-10">
-				<h1 className="text-[6rem] font-bold uppercase">
+			<div className="flex flex-col gap-4 py-10 md:flex-row md:items-center md:justify-between">
+				<h1 className="text-4xl font-bold uppercase sm:text-5xl lg:text-[6rem]">
 					Latest Article
 				</h1>
 				<Link
@@ -31,7 +31,7 @@ const LatestArticle = () => {
 			</div>
 			<div>
 				<div className="flex">
-					<div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-y ">
+					<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
 						{randomArticles.map((article, index) => (
 							<ArticleCardGrid
 								key={article.id}

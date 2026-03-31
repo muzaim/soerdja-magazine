@@ -28,7 +28,7 @@ const MagazineDetailPage: React.FC<Props> = ({ params }) => {
 
 	return (
 		<div className="px-4 md:px-8 lg:px-16">
-			<div className="bg-white-30 text-black grid grid-cols-2 py-5 gap-6">
+			<div className="bg-white-30 text-black grid grid-cols-1 py-5 gap-4 sm:grid-cols-2 sm:gap-6">
 				<Link
 					href="/magazines"
 					className="font-bold text-lg uppercase leading-none"
@@ -39,17 +39,17 @@ const MagazineDetailPage: React.FC<Props> = ({ params }) => {
 					<span className="font-semibold uppercase">Magazines</span>
 				</div>
 			</div>
-			<div className="bg-white-30  grid grid-cols-2 py-5 gap-6">
-				<h3 className="font-bold text-[7rem] uppercase leading-none">
+			<div className="bg-white-30  grid grid-cols-1 py-5 gap-6 md:grid-cols-2">
+				<h3 className="text-4xl font-bold uppercase leading-none sm:text-5xl md:text-6xl lg:text-[7rem]">
 					{article.title}
 				</h3>
-				<div className="flex flex-col justify-between">
+				<div className="flex flex-col justify-between text-sm leading-7 sm:text-base">
 					{article.summary}
 				</div>
 			</div>
 			<div className="flex flex-col justify-between pb-12">
-				<div className="flex flex-row gap-3 justify-between items-end mt-6 ">
-					<div className="flex flex-row gap-3">
+				<div className="mt-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+					<div className="flex flex-col gap-2 text-sm sm:text-base md:flex-row md:flex-wrap md:gap-3">
 						<div className="flex gap-2">
 							<span className="font-bold">Text</span>
 							<span>{article.author}</span>
@@ -72,12 +72,12 @@ const MagazineDetailPage: React.FC<Props> = ({ params }) => {
 							</span>
 						</div>
 					</div>
-					<button className="bg-white-30 text-black border px-5 py-2 rounded-full">
+					<button className="w-max bg-white-30 text-black border px-5 py-2 rounded-full">
 						Label
 					</button>
 				</div>
 			</div>
-			<div className="relative w-full h-[600px]">
+			<div className="relative w-full h-[320px] sm:h-[420px] lg:h-[600px]">
 				<Image
 					src={article.cover}
 					alt="magazine"
@@ -86,9 +86,9 @@ const MagazineDetailPage: React.FC<Props> = ({ params }) => {
 				/>
 			</div>
 
-			<div className="grid grid-cols-12 py-20 gap-6">
-				<div className="col-span-5 flex justify-end">
-					<div className="w-[300px] ">
+			<div className="grid grid-cols-1 gap-10 py-12 lg:grid-cols-12 lg:gap-6 lg:py-20">
+				<div className="lg:col-span-5 lg:flex lg:justify-end">
+					<div className="w-full max-w-[300px]">
 						<div className="flex flex-row gap-3 items-center">
 							<Image
 								src={img}
@@ -161,11 +161,11 @@ const MagazineDetailPage: React.FC<Props> = ({ params }) => {
 					</div>
 				</div>
 
-				<div className="col-span-4 flex flex-col justify-start space-y-6 text-gray-800 leading-relaxed">
+				<div className="lg:col-span-4 flex flex-col justify-start space-y-6 text-gray-800 leading-relaxed">
 					{article.content}
 				</div>
 
-				<div className="col-span-3"></div>
+				<div className="hidden lg:block lg:col-span-3"></div>
 			</div>
 
 			<hr />

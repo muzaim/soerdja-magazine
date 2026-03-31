@@ -29,7 +29,7 @@ const Stage2: React.FC<Stage2Props> = ({ formik }) => {
 	}, [formik.values.summary]);
 
 	return (
-		<div className="w-[80%] mx-auto flex flex-col gap-8">
+		<div className="w-full max-w-3xl mx-auto flex flex-col gap-8">
 			<div className="flex flex-col gap-2">
 				<label htmlFor="summary" className="font-semibold text-black">
 					Summary

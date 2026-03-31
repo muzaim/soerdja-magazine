@@ -55,7 +55,7 @@ const Stage3: React.FC<Stage3Props> = ({ formik }) => {
 	};
 
 	return (
-		<div className="w-[80%] mx-auto flex flex-col gap-8">
+		<div className="w-full max-w-3xl mx-auto flex flex-col gap-8">
 			<div className="flex flex-col gap-2">
 				<label htmlFor="content" className="font-semibold text-black">
 					Content
@@ -81,7 +81,7 @@ const Stage3: React.FC<Stage3Props> = ({ formik }) => {
 				)}
 			</div>
 
-			<div className="grid grid-cols-5 gap-4">
+			<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
 				{coverImages.map((img) => (
 					<div
 						key={img}

@@ -16,71 +16,83 @@ type ArticleCardGridProps = {
 const ArticleCardGrid = ({ article, index }: ArticleCardGridProps) => {
 	return (
 		<div
-			className="p-10 flex flex-col border border-gray-400 last:col-span-1 "
+			className="
+		  group flex flex-col
+		  rounded-2xl border border-gray-200
+		  bg-white p-6 md:p-8
+		  hover:shadow-xl transition-all duration-300
+		"
 			data-aos="fade-up"
 			data-aos-delay={(index * 200).toString()}
 		>
-			<div className="flex flex-row justify-between items-center mb-10">
-				<h1 className="text-sm text-gray-600">
+			{/* Top meta */}
+			<div className="flex items-center justify-between mb-6">
+				<span className="text-xs text-gray-500 uppercase tracking-wide">
 					{new Date(article.date).toLocaleDateString("en-US", {
 						year: "numeric",
 						month: "long",
 						day: "numeric",
 					})}
-				</h1>
-				<button
-					className="px-4 py-1 border border-gray-400 rounded-full text-xs font-medium uppercase
-            hover:bg-black hover:text-white transition-colors duration-300"
-				>
+				</span>
+
+				<span className="
+			px-4 py-1
+			rounded-full border border-gray-300
+			text-xs font-semibold uppercase
+			group-hover:bg-black group-hover:text-white
+			transition
+		  ">
 					{article.category}
-				</button>
+				</span>
 			</div>
 
-			<Image
-				src={article.cover}
-				width={400}
-				height={500}
-				alt={article.title}
-				className="object-cover w-full mb-4"
-			/>
+			{/* Cover */}
+			<div className="overflow-hidden rounded-xl mb-6">
+				<Image
+					src={article.cover}
+					width={400}
+					height={500}
+					alt={article.title}
+					className="
+			  w-full object-cover
+			  group-hover:scale-105 transition duration-500
+			"
+				/>
+			</div>
 
-			<h2 className="font-bold text-3xl font-poppins">{article.title}</h2>
+			{/* Title */}
+			<h2 className="font-bold text-xl md:text-2xl font-poppins leading-snug mb-4">
+				{article.title}
+			</h2>
 
-			<p className="text-gray-700 text-sm flex-grow leading-relaxed mb-4 line-clamp-4 my-7">
+			{/* Summary */}
+			<p className="text-gray-600 text-sm leading-relaxed line-clamp-4 mb-6">
 				{article.summary}
 			</p>
 
-			<div className="flex flex-row text-xs text-gray-600 gap-6 justify-between mt-7 mb-5">
-				<div className="flex flex-row gap-8">
-					<p>
-						<span className="font-semibold text-black">Date:</span>{" "}
-						<span className="text-gray-600">
-							{new Date(article.date).toLocaleDateString(
-								"en-US",
-								{
-									year: "numeric",
-									month: "long",
-									day: "numeric",
-								}
-							)}
-						</span>
-					</p>
-					<p>
-						<span className="font-semibold text-black">
-							Duration:
-						</span>{" "}
+			{/* Footer */}
+			<div className="mt-auto flex items-center justify-between text-xs text-gray-500">
+				<div className="flex gap-6">
+					<span>
+						<span className="font-semibold text-gray-900">Duration:</span>{" "}
 						20 min
-					</p>
+					</span>
 				</div>
 
 				<Link
 					href={`/magazines/${article.id}`}
-					className="font-semibold text-black hover:text-gray-800 transition-colors duration-300"
+					className="
+			  font-semibold text-black
+			  flex items-center gap-1
+			  hover:gap-2 transition-all
+			"
 				>
-					Read More &raquo;
+					Read More
+					<span>&rarr;</span>
 				</Link>
 			</div>
 		</div>
+
 	);
 };
 

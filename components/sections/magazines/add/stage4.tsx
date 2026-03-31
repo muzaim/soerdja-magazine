@@ -19,7 +19,7 @@ const Stage4: React.FC<Stage4Props> = ({ formik }) => {
     const { values } = formik;
 
     return (
-        <div className="w-[80%] mx-auto flex flex-col gap-8">
+        <div className="w-full max-w-3xl mx-auto flex flex-col gap-8">
 
 
             <div className="flex flex-col lg:flex-row gap-6">

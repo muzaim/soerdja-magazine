@@ -6,40 +6,40 @@ const Header = () => {
 	return (
 		<header className="w-full relative">
 			<div className="px-4 md:px-8 lg:px-16">
-				<div className="h-20 flex flex-row justify-between items-center">
-					<Link href="/" className="text-lg font-bold font-poppins">
+				<div className="flex flex-col gap-4 py-4 sm:h-20 sm:flex-row sm:items-center sm:justify-between sm:py-0">
+					<Link href="/" className="text-base font-bold font-poppins sm:text-lg">
 						Soerdja Magazine
 					</Link>
-					<ul className="flex gap-5 text-md">
+					<ul className="flex flex-wrap items-center gap-3 text-sm sm:gap-5 sm:text-base">
 						<Link href="/magazines" className="">
 							Magazines
 						</Link>
 						<Link href="/podcast">Podcast</Link>
-						<div>-</div>
-						<div className="flex items-center justify-end gap-5">
+						<div className="hidden sm:block">-</div>
+						<div className="flex items-center justify-end gap-4 sm:gap-5">
 							<a
 								href="#"
 								className="text-black hover:text-gray-400 transition"
 							>
-								<FaFacebookF size={20} />
+								<FaFacebookF size={18} />
 							</a>
 							<a
 								href="#"
 								className="text-black hover:text-gray-400 transition"
 							>
-								<FaInstagram size={20} />
+								<FaInstagram size={18} />
 							</a>
 							<a
 								href="#"
 								className="text-black hover:text-gray-400 transition"
 							>
-								<FaTwitter size={20} />
+								<FaTwitter size={18} />
 							</a>
 							<a
 								href="#"
 								className="text-black hover:text-gray-400 transition"
 							>
-								<FaYoutube size={20} />
+								<FaYoutube size={18} />
 							</a>
 						</div>
 					</ul>

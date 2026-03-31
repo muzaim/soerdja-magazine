@@ -28,8 +28,8 @@ const Content = () => {
 	const articles = useArticlesStore((state) => state.articles);
 
 	return (
-		<div className="w-full grid grid-cols-12 gap-4">
-			<div className="col-span-9">
+		<div className="w-full grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-4">
+			<div className="lg:col-span-9">
 				<div className="flex flex-col">
 					{articles.slice(0, 6).map((article, index) => (
 						<ArticleCard
@@ -48,13 +48,13 @@ const Content = () => {
 					</Link>
 				</div>
 			</div>
-			<div className="col-span-3 flex flex-col gap-10">
+			<div className="flex flex-col gap-10 lg:col-span-3">
 				<div>
 					<div className="flex flex-col gap-3 mt-4">
 						<h1 className="text-2xl font-semibold text-gray-800 uppercase">
 							Print Magazine
 						</h1>
-						<h3 className="text-5xl text-black font-bold uppercase">
+						<h3 className="text-3xl text-black font-bold uppercase sm:text-4xl lg:text-5xl">
 							March,1 1952
 						</h3>
 					</div>

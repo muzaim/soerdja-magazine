@@ -12,11 +12,11 @@ const Magazine = () => {
 		<>
 			<div className="px-4 md:px-8 lg:px-16">
 				<div className="w-full">
-					<h1 className="w-full text-center font-bold uppercase text-[13vw] leading-none font-serif">
+					<h1 className="w-full text-center font-bold uppercase leading-none font-serif text-5xl sm:text-7xl md:text-[13vw]">
 						magazines
 					</h1>
-					<div className="flex flex-row justify-between items-center  pb-4">
-						<h1 className="uppercase text-xl font-bold tracking-wide">
+					<div className="flex flex-col gap-4 pb-4 md:flex-row md:items-center md:justify-between">
+						<h1 className="uppercase text-lg font-bold tracking-wide sm:text-xl">
 							Categories
 						</h1>
 
@@ -29,7 +29,7 @@ const Magazine = () => {
 					</div>
 				</div>
 				<div className="mb-40">
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+					<div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
 						{articles.map((article, index) => (
 							<ArticleCardGrid
 								key={article.id}
